@@ -17,7 +17,7 @@ from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import DocumentAnalysisClient
 
 load_dotenv()
-account_url = "https://sabarishmnblob.blob.core.windows.net"
+account_url = "https://{blob-name}.blob.core.windows.net"
 default_credential = DefaultAzureCredential()
 credential = AzureKeyCredential(str(os.getenv("AZURE_KEY_CREDENTIAL")))
 blob_service_client = BlobServiceClient(account_url, credential=default_credential)
